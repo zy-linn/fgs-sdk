@@ -1,0 +1,44 @@
+{
+  "name": "serverless-fgs-sdk",
+  "version": "0.0.3",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "jest",
+    "prebuild": "rimraf dist",
+    "postbuild": "tsc --emitDeclarationOnly",
+    "build": "node esbuild.config.js"
+  },
+  "author": "zyl",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^18.19.70",
+    "esbuild": "^0.24.2",
+    "esbuild-node-externals": "^1.16.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@huaweicloud/huaweicloud-sdk-core": "3.1.132",
+    "@huaweicloud/huaweicloud-sdk-functiongraph": "3.1.132",
+    "@huaweicloud/huaweicloud-sdk-iam": "3.1.132",
+    "compressing": "1.10.1",
+    "esdk-obs-nodejs": "^3.24.3",
+    "lodash": "4.17.21",
+    "ora": "^8.1.1",
+    "rimraf": "6.0.1"
+  }
+}
